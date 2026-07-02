@@ -5,6 +5,8 @@ DATE_ADD()
 DATE_SUB()
 DATEDIFF()
 TIMESTAMPDIFF()
+sum(case when s.sale_date between '2019-01-01' and '2019-03-31' Then 0 else 1 end )
+MAX(sale_date) <= CAST('2019-03-31' AS DATE)
 
 https://leetcode.com/problems/monthly-transactions-i/
 +---------------+---------+
@@ -63,3 +65,5 @@ SELECT DATEDIFF('2024-11-01', '2024-11-18');
 Output:
 
 -17
+
+
