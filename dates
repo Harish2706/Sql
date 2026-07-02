@@ -1,3 +1,11 @@
+
+Important functions
+DATE_FORMAT()
+DATE_ADD()
+DATE_SUB()
+DATEDIFF()
+TIMESTAMPDIFF()
+
 https://leetcode.com/problems/monthly-transactions-i/
 +---------------+---------+
 | Column Name   | Type    |
@@ -28,3 +36,30 @@ select date_format(trans_date,'%Y-%m') as month,
     SUM(amount) AS trans_total_amount,
     SUM((state = 'approved') * amount) AS approved_total_amount from Transactions 
     group by month,country
+
+
+Syntax (MySQL)
+DATEDIFF(date1, date2)
+
+It returns:
+
+date1 - date2
+
+in days.
+
+Example 1: Positive result
+SELECT DATEDIFF('2024-11-18', '2024-11-01');
+
+Output:
+
+17
+
+Because:
+
+2024-11-18 - 2024-11-01 = 17 days
+Example 2: Negative result
+SELECT DATEDIFF('2024-11-01', '2024-11-18');
+
+Output:
+
+-17
